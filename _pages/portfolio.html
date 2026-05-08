@@ -1,14 +1,279 @@
 ---
 layout: archive
-title: "Portfolio"
+title: "portfolio"
+page_title: "check out my art! :D"
 permalink: /portfolio/
 author_profile: true
 ---
 
 {% include base_path %}
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+<style>
 
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* ---------- FILTER BUTTONS ---------- */
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  background: linear-gradient(145deg, #f4ffc3, #e6f5ad);
+  color: #3d4a2a;
+
+  border: 1px solid rgba(120, 150, 90, 0.35);
+  border-radius: 12px;
+
+  padding: 10px 18px;
+  margin: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(90, 120, 60, 0.15);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+
+.filters button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(145deg, #eefaa8, #dff08f);
+  box-shadow: 0 6px 14px rgba(90, 120, 60, 0.2);
+}
+
+.filters button.active {
+  background: linear-gradient(145deg, #eaf7a8, #d6ea7d);
+  border: 1px solid rgba(90, 120, 60, 0.5);
+  box-shadow: 0 6px 14px rgba(90, 120, 60, 0.25);
+  transform: translateY(-1px);
+}
+
+/* ---------- GALLERY GRID ---------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  /* max-width: 1100px; */
+
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+
+<!-- FILTERS -->
+<div class="filters">
+  <button class="active" onclick="filterArt('all', this)">all</button>
+  <button onclick="filterArt('painting', this)">painting</button>
+  <button onclick="filterArt('clay', this)">clay</button>
+  <button onclick="filterArt('animation', this)">animation</button>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery">
+
+<a href="\images\art\a warm day.jpg" class="glightbox">
+  <img class="painting" src="\images\art\a warm day.jpg">
+</a>
+
+<a href="\images\art\another snail planet.png" class="glightbox">
+  <img class="painting" src="\images\art\another snail planet.png">
+</a>
+
+<a href="\images\art\sunny.jpg" class="glightbox">
+  <img class="clay" src="\images\art\sunny.jpg">
+</a>
+
+<a href="\images\art\elizabeth park tree.jpg" class="glightbox">
+  <img class="painting" src="\images\art\elizabeth park tree.jpg">
+</a>
+
+<a href="\images\art\thru the window.jpg" class="glightbox">
+  <img class="painting" src="\images\art\thru the window.jpg">
+</a>
+
+<a href="\images\art\olly.jpg" class="glightbox">
+  <img class="clay" src="\images\art\olly.jpg">
+</a>
+
+<a href="\images\art\how it feels.jpg" class="glightbox">
+  <img class="painting" src="\images\art\how it feels.jpg">
+</a>
+
+<a href="\images\art\lady by the stream.jpg" class="glightbox">
+  <img class="painting" src="\images\art\lady by the stream.jpg">
+</a>
+
+<a href="\images\art\2012.jpg" class="glightbox">
+  <img class="painting" src="\images\art\2012.jpg">
+</a>
+
+<a href="\images\art\brown bear.jpg" class="glightbox">
+  <img class="painting" src="\images\art\brown bear.jpg">
+</a>
+
+<a href="\images\art\morning time.jpg" class="glightbox">
+  <img class="painting" src="\images\art\morning time.jpg">
+</a>
+
+<a href="\images\art\nicky.jpg" class="glightbox">
+  <img class="clay" src="\images\art\nicky.jpg">
+</a>
+
+<a href="\images\art\wise snail.jpg" class="glightbox">
+  <img class="clay" src="\images\art\wise snail.jpg">
+</a>
+
+<a href="\images\art\cowboy snail.jpg" class="glightbox">
+  <img class="clay" src="\images\art\cowboy snail.jpg">
+</a>
+
+<a href="\images\art\yipee.jpg" class="glightbox">
+  <img class="clay" src="\images\art\yipee.jpg">
+</a>
+
+<a href="\images\art\you comin.jpg" class="glightbox">
+  <img class="painting" src="\images\art\you comin.jpg">
+</a>
+
+<a href="\images\art\dogs in space comission.jpg" class="glightbox">
+  <img class="painting" src="\images\art\dogs in space comission.jpg">
+</a>
+
+<a href="\images\art\seed.jpg" class="glightbox">
+  <img class="painting" src="\images\art\seed.jpg">
+</a>
+
+<a href="\images\art\kind person.jpg" class="glightbox">
+  <img class="painting" src="\images\art\kind person.jpg">
+</a>
+
+<a href="\images\art\ozzys and alberts.jpg" class="glightbox">
+  <img class="painting" src="\images\art\ozzys and alberts.jpg">
+</a>
+
+<a href="\images\art\outdoors-person.jpg" class="glightbox">
+  <img class="painting" src="\images\art\outdoors-person.jpg">
+</a>
+
+<a href="\images\art\still.jpg" class="glightbox">
+  <img class="painting" src="\images\art\still.jpg">
+</a>
+
+<a href="\images\art\clickers.PNG" class="glightbox">
+  <img class="painting" src="\images\art\clickers.PNG">
+</a>
+
+<a href="\images\art\around-me.jpg" class="glightbox">
+  <img class="painting" src="\images\art\around-me.jpg">
+</a>
+
+<a href="\images\art\xmas.jpg" class="glightbox">
+  <img class="clay" src="\images\art\xmas.jpg">
+</a>
+
+<a href="\images\art\snail clicker.jpg" class="glightbox">
+  <img class="clay" src="\images\art\snail clicker.jpg">
+</a>
+
+<a href="\images\art\evil ozzy.jpg" class="glightbox">
+  <img class="painting" src="\images\art\evil ozzy.jpg">
+</a>
+
+<a href="\images\art\magic tree.jpg" class="glightbox">
+  <img class="painting" src="\images\art\magic tree.jpg">
+</a>
+
+<a href="\images\art\other ozzy.jpg" class="glightbox">
+  <img class="painting" src="\images\art\other ozzy.jpg">
+</a>
+
+<a href="\images\art\in-a-star.jpg" class="glightbox">
+  <img class="painting" src="\images\art\in-a-star.jpg">
+</a>
+
+<a href="\images\art\mug.jpg" class="glightbox">
+  <img class="painting" src="\images\art\mug.jpg">
+</a>
+
+<a href="\images\art\existential dread.jpg" class="glightbox">
+  <img class="painting" src="\images\art\existential dread.jpg">
+</a>
+
+<a href="\images\art\ozzy alien comic.jpg" class="glightbox">
+  <img class="painting" src="\images\art\ozzy alien comic.jpg">
+</a>
+
+</div>
+
+<script>
+
+// FILTERING
+function filterArt(type, clickedButton) {
+  const images = document.querySelectorAll('.gallery a');
+
+  images.forEach(item => {
+    const img = item.querySelector('img');
+
+    if (type === 'all' || img.classList.contains(type)) {
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
+    }
+  });
+
+  document.querySelectorAll('.filters button').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  if (clickedButton) {
+    clickedButton.classList.add('active');
+  }
+}
+
+// LIGHTBOX INIT (GLightbox)
+const lightbox = GLightbox({
+  selector: '.glightbox'
+});
+
+</script>

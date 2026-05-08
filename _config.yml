@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "ava bartolome"
+title                    : "avahayako"
 title_separator          : "-"
 name                     : &name "ava bartolome"
 description              : &description "personal description"
@@ -24,12 +24,12 @@ author:
   # Biographic information
   avatar           : "bio-photo.jpg" #"profile.png"
   name             : "ava bartolome"
-  pronouns         : # example: "she/her"  
-  bio              : "I like to make things"
+  pronouns         : "she/they"  
+  bio              : "artist based in CT<br/>I like to make things"
   location         : #"Earth"
   employer         : #"Red Brick University"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "avahayako.art@gmail.com" 
 
   # Academic websites
   academia         : # URL
@@ -58,7 +58,7 @@ author:
   goodreads        : # Username
   google_plus      : # Username
   keybase          : # Username
-  instagram        : mango_purrson_xo # Username
+  instagram        : avahayako # Username
   lastfm           : # Username
   linkedin         : # Username
   mastodon         : # URL
@@ -220,9 +220,9 @@ collections:
   # publications:
   #   output: true
   #   permalink: /:collection/:path/
-  # portfolio:
-  #   output: true
-  #   permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
   # talks:
   #   output: true
   #   permalink: /:collection/:path/

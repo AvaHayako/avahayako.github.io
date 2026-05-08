@@ -157,6 +157,47 @@ body {
 </style>
 
 
+
+<script>
+// LIGHTBOX INIT (GLightbox)
+const lightbox = GLightbox({
+  selector: '.glightbox',
+
+  autoplayVideos: false
+});
+
+function filterArt(type, clickedButton) {
+  const items = document.querySelectorAll('.gallery a');
+
+  items.forEach(item => {
+
+    const media = item.querySelector('img, video');
+
+    if (type === 'all' || media.classList.contains(type)) {
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
+    }
+
+  });
+
+  document.querySelectorAll('.filters button').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  if (clickedButton) {
+    clickedButton.classList.add('active');
+  }
+}
+
+
+
+
+</script>
+
+
+
+
 <!-- FILTERS -->
 <div class="filters">
   <button class="active" onclick="filterArt('all', this)">all</button>
@@ -359,41 +400,3 @@ body {
 </a>
 
 </div>
-
-
-<script>
-// LIGHTBOX INIT (GLightbox)
-const lightbox = GLightbox({
-  selector: '.glightbox',
-
-  autoplayVideos: false
-});
-
-function filterArt(type, clickedButton) {
-  const items = document.querySelectorAll('.gallery a');
-
-  items.forEach(item => {
-
-    const media = item.querySelector('img, video');
-
-    if (type === 'all' || media.classList.contains(type)) {
-      item.classList.remove('hidden');
-    } else {
-      item.classList.add('hidden');
-    }
-
-  });
-
-  document.querySelectorAll('.filters button').forEach(btn => {
-    btn.classList.remove('active');
-  });
-
-  if (clickedButton) {
-    clickedButton.classList.add('active');
-  }
-}
-
-
-
-
-</script>

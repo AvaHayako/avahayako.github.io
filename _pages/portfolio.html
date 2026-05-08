@@ -99,7 +99,63 @@ body {
   }
 }
 
+/* ---------- VIDEO STYLING ---------- */
+
+.video-thumb {
+  position: relative;
+  width: 100%;
+  width:220px;
+  height: 392px;
+}
+
+.video-thumb img {
+  width: 100%;
+  height:100%;
+  display: block;
+  border-radius: 10px;
+  object-fit: fill;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* hover effect */
+.youtube-item:hover img {
+  transform: scale(1.02);
+  filter: brightness(0.85);
+}
+
+/* play button */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 55px;
+  height: 55px;
+
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+  padding-left: 3px;
+
+  pointer-events: none;
+}
+
+/* hover animation */
+.youtube-item:hover .play-button {
+  transform: translate(-50%, -50%) scale(1.05);
+  background: rgba(0, 0, 0, 0.7);
+}
+
 </style>
+
 
 <!-- FILTERS -->
 <div class="filters">
@@ -128,8 +184,17 @@ body {
   <img class="painting" src="\images\art\elizabeth park tree.jpg">
 </a>
 
-<a href="\images\art\thru the window.jpg" class="glightbox">
-  <img class="painting" src="\images\art\thru the window.jpg">
+<a href="https://youtube.com/embed/Sd38dfsZ-Jc"
+   class="glightbox youtube-item">
+  <div class="video-thumb">
+    <img class="animation"
+         src="\images\art\snailmation-5.png">
+    <div class="play-button">▶</div>
+  </div>
+</a>
+
+<a href="\images\art\thru the window.JPG" class="glightbox">
+  <img class="painting" src="\images\art\thru the window.JPG">
 </a>
 
 <a href="\images\art\olly.jpg" class="glightbox">
@@ -144,8 +209,8 @@ body {
   <img class="painting" src="\images\art\lady by the stream.jpg">
 </a>
 
-<a href="\images\art\2012.jpg" class="glightbox">
-  <img class="painting" src="\images\art\2012.jpg">
+<a href="\images\art\2012.JPG" class="glightbox">
+  <img class="painting" src="\images\art\2012.JPG">
 </a>
 
 <a href="\images\art\brown bear.jpg" class="glightbox">
@@ -180,16 +245,16 @@ body {
   <img class="painting" src="\images\art\dogs in space comission.jpg">
 </a>
 
-<a href="\images\art\seed.jpg" class="glightbox">
-  <img class="painting" src="\images\art\seed.jpg">
+<a href="\images\art\seed.JPG" class="glightbox">
+  <img class="painting" src="\images\art\seed.JPG">
 </a>
 
-<a href="\images\art\kind person.jpg" class="glightbox">
-  <img class="painting" src="\images\art\kind person.jpg">
+<a href="\images\art\kind person.JPG" class="glightbox">
+  <img class="painting" src="\images\art\kind person.JPG">
 </a>
 
-<a href="\images\art\ozzys and alberts.jpg" class="glightbox">
-  <img class="painting" src="\images\art\ozzys and alberts.jpg">
+<a href="\images\art\ozzys and alberts.JPG" class="glightbox">
+  <img class="painting" src="\images\art\ozzys and alberts.JPG">
 </a>
 
 <a href="\images\art\outdoors-person.jpg" class="glightbox">
@@ -244,22 +309,73 @@ body {
   <img class="painting" src="\images\art\ozzy alien comic.jpg">
 </a>
 
+
+<a href="https://youtube.com/embed/h-wSx2ViN1k"
+   class="glightbox youtube-item">
+  <div class="video-thumb">
+    <img class="animation"
+         src="\images\art\snailmation-6.png">
+    <div class="play-button">▶</div>
+  </div>
+</a>
+
+
+
+<a href="https://youtube.com/embed/UW5vyTMQPR0"
+   class="glightbox youtube-item">
+  <div class="video-thumb">
+    <img class="animation"
+         src="\images\art\snailmation-3.png">
+    <div class="play-button">▶</div>
+  </div>
+</a>
+
+<a href="https://youtube.com/embed/nrXPxmfoh4Y"
+   class="glightbox youtube-item">
+  <div class="video-thumb">
+    <img class="animation"
+         src="\images\art\snailmation-2.png">
+    <div class="play-button">▶</div>
+  </div>
+</a>
+
+<a href="https://www.youtube.com/embed/ZGWDkBbTAJk"
+   class="glightbox youtube-item">
+  <div class="video-thumb">
+    <img class="animation"
+         src="\images\art\snailmation-4.png">
+    <div class="play-button">▶</div>
+  </div>
+</a>
+
+
+<a href="https://youtube.com/embed/RFp0CMUC40E"
+   class="glightbox youtube-item">
+  <div class="video-thumb">
+    <img class="animation"
+         src="\images\art\snailmation-1.png">
+    <div class="play-button">▶</div>
+  </div>
+</a>
+
 </div>
+
 
 <script>
 
-// FILTERING
 function filterArt(type, clickedButton) {
-  const images = document.querySelectorAll('.gallery a');
+  const items = document.querySelectorAll('.gallery a');
 
-  images.forEach(item => {
-    const img = item.querySelector('img');
+  items.forEach(item => {
 
-    if (type === 'all' || img.classList.contains(type)) {
+    const media = item.querySelector('img, video');
+
+    if (type === 'all' || media.classList.contains(type)) {
       item.classList.remove('hidden');
     } else {
       item.classList.add('hidden');
     }
+
   });
 
   document.querySelectorAll('.filters button').forEach(btn => {
@@ -273,7 +389,10 @@ function filterArt(type, clickedButton) {
 
 // LIGHTBOX INIT (GLightbox)
 const lightbox = GLightbox({
-  selector: '.glightbox'
+  selector: '.glightbox',
+
+  autoplayVideos: false
 });
+
 
 </script>

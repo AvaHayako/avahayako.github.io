@@ -2,7 +2,7 @@
 permalink: /
 title: "home"
 # page_title: "hi, i'm ava&mdash;\nsplitartist, cat lover, and specialist in whimsy :D"
-page_title: "hi, i'm ava~\nsplitartist, snail lover, and nature enthusiast.\nsplitwelcome to my page :D"
+# page_title: "hi, i'm ava~\nsplitartist, snail lover, and nature enthusiast.\nsplitwelcome to my page :D"
 author_profile: true
 redirect_from: 
   - /about/
@@ -12,6 +12,9 @@ redirect_from:
 <div>
 <p id="about_empty"></p>
 <p id="about">
+<h1>hi, i'm ava~</h1>
+<h1>artist, cat lover, and nature enthusiast.</h1>
+<h1>welcome to my page :D</h1>
 <body> 
 I like to think that my art is a manifestation of my inner child. <strong>Curiousity, silliness, and imagination are throughlines of my paintings, illustrations, and clay creations.</strong> Common motifs in my art include nature, trees, and snails.
 <br/><br/>

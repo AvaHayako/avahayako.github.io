@@ -266,7 +266,7 @@ body {
 </a>
 
 <a href="\images\art\clickers.PNG" class="glightbox">
-  <img class="painting" src="\images\art\clickers.PNG">
+  <img class="clay" src="\images\art\clickers.PNG">
 </a>
 
 <a href="\images\art\around-me.jpg" class="glightbox">
@@ -362,6 +362,18 @@ body {
 
 
 <script>
+// LIGHTBOX INIT (GLightbox)
+// const lightbox = GLightbox({
+//   selector: '.glightbox',
+
+//   autoplayVideos: false
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+});
 
 function filterArt(type, clickedButton) {
   const items = document.querySelectorAll('.gallery a');
@@ -387,12 +399,7 @@ function filterArt(type, clickedButton) {
   }
 }
 
-// LIGHTBOX INIT (GLightbox)
-const lightbox = GLightbox({
-  selector: '.glightbox',
 
-  autoplayVideos: false
-});
 
 
 </script>

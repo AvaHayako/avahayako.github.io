@@ -9,7 +9,25 @@ redirect_from:
   - /about.html
 ---
 
-<div>
+<style>
+body {
+  background-image: url('/images/art/another snail planet.jpg');
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+}
+
+.div-1 {
+  background-color: rgba(51, 34, 10,.85);
+  padding: 20px;
+  top: 5em;
+}
+
+</style>
+
+
+<div class='div-1'>
+
 <p id="about_empty"></p>
 <p id="about">
 <h1>hi, i'm ava~</h1>
@@ -25,6 +43,4 @@ In any case, I'm excited to evolve as an artist with time and experience. Taking
 I love talking about all things creative! Feel free to email me or message me on social media if you ever wanna chat. I am also always up to do a comission in any of the mediums I use <a href="/portfolio">(see my portfolio for examples)</a>.    
 </body>
 </p>
-<br/><br/>
-<img src="/images/art/another snail planet.png">
 </div>

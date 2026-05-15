@@ -1,7 +1,11 @@
 {% include base_path %}
 
 {% if page.author_profile or layout.author_profile or page.sidebar %}
-  <div class="sidebar sticky">
+  <div class="sidebar sticky"
+    {% if page.title == 'home' %}
+      style="background-color: rgba(51, 34, 10,.85); padding:20px;"
+    {% endif %}
+  >
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
   {% if page.sidebar %}
     {% for s in page.sidebar %}

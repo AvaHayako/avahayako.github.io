@@ -1,0 +1,28 @@
+---
+layout: archive
+title: "projects "
+page_title: "~ this page is a WIP ~"
+permalink: /projects/
+author_profile: true
+---
+
+{% include base_path %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script defer src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+</style>
+<!-- 
+<a href="/project-1">(see my portfolio for examples)</a>.     -->
+
+
+{% for post in site.projects %}
+  {% include archive-single.html %}
+{% endfor %}

@@ -3,51 +3,43 @@
    ========================================================================== */
 
 $(document).ready(function () {
-  // detect OS/browser preference
+
+  // ================================
+  // FORCE DARK MODE (no switching)
+  // ================================
+  localStorage.setItem("theme", "dark");
+  $("html").attr("data-theme", "dark");
+
+  // detect OS/browser preference (kept but ignored)
   const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches
     ? 'dark'
-    : 'light';
+    : 'dark'; // forced anyway
 
   // Set the theme on page load or when explicitly called
   var setTheme = function (theme) {
-    const use_theme =
-      theme ||
-      localStorage.getItem("theme") ||
-      $("html").attr("data-theme") ||
-      browserPref;
-
-    if (use_theme === "dark") {
-      $("html").attr("data-theme", "dark");
-      $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
-    } else if (use_theme === "light") {
-      $("html").removeAttr("data-theme");
-      $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
-    }
+    // always force dark regardless of input or stored values
+    $("html").attr("data-theme", "dark");
+    $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
   };
 
   setTheme();
 
-  // if user hasn't chosen a theme, follow OS changes
+  // DISABLE OS THEME CHANGES (prevent auto switching)
   window
     .matchMedia('(prefers-color-scheme: dark)')
     .addEventListener("change", (e) => {
-      if (!localStorage.getItem("theme")) {
-        setTheme(e.matches ? "dark" : "light");
-      }
+      $("html").attr("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
     });
 
-  // Toggle the theme manually
+  // DISABLE TOGGLE LOGIC (hard override)
   var toggleTheme = function () {
-    const current_theme = $("html").attr("data-theme");
-    const new_theme = current_theme === "dark" ? "light" : "dark";
-    localStorage.setItem("theme", new_theme);
-    setTheme(new_theme);
+    $("html").attr("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+    $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
   };
 
   $('#theme-toggle').on('click', toggleTheme);
-
-  // These should be the same as the settings in _variables.scss
-  const scssLarge = 925; // pixels
 
   // Sticky footer
   var bumpIt = function () {
@@ -60,6 +52,7 @@ $(document).ready(function () {
   $(window).resize(function () {
     didResize = true;
   });
+
   setInterval(function () {
     if (didResize) {
       didResize = false;
@@ -78,66 +71,59 @@ $(document).ready(function () {
 
   // Restore the follow menu if toggled on a window resize
   jQuery(window).on('resize', function () {
-    if ($('.author__urls.social-icons').css('display') == 'none' && $(window).width() >= scssLarge) {
-      $(".author__urls").css('display', 'block')
+    if ($('.author__urls.social-icons').css('display') == 'none' && $(window).width() >= 925) {
+      $(".author__urls").css('display', 'block');
     }
   });
 
-  // init smooth scroll, this needs to be slightly more than then fixed masthead height
-  $("a").smoothScroll({ 
-    offset: -75, // needs to match $masthead-height
+  // Smooth scroll (masthead offset)
+  $("a").smoothScroll({
+    offset: -75,
     preventDefault: false,
-  }); 
+  });
 
-  // add lightbox class to all image links
-  // Add "image-popup" to links ending in image extensions,
-  // but skip any <a> that already contains an <img>
+  // Lightbox image handling
   $("a[href$='.jpg'],\
   a[href$='.jpeg'],\
   a[href$='.JPG'],\
   a[href$='.png'],\
   a[href$='.gif'],\
   a[href$='.webp']")
-      .not(':has(img)')
-      .addClass("image-popup");
+    .not(':has(img)')
+    .addClass("image-popup");
 
-  // 1) Wrap every <p><img> (except emoji images) in an <a> pointing at the image, and give it the lightbox class
-  $('p > img').not('.emoji').each(function() {
+  $('p > img').not('.emoji').each(function () {
     var $img = $(this);
-    // skip if it’s already wrapped in an <a.image-popup>
-    if ( ! $img.parent().is('a.image-popup') ) {
+    if (!$img.parent().is('a.image-popup')) {
       $('<a>')
         .addClass('image-popup')
         .attr('href', $img.attr('src'))
-        .insertBefore($img)   // place the <a> right before the <img>
-        .append($img);        // move the <img> into the <a>
+        .insertBefore($img)
+        .append($img);
     }
   });
 
-  // Magnific-Popup options
   $(".image-popup").magnificPopup({
     type: 'image',
     tLoading: 'Loading image #%curr%...',
     gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+      preload: [0, 1]
     },
     image: {
       tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
     },
-    removalDelay: 500, // Delay in milliseconds before popup is removed
-    // Class that is added to body when popup is open.
-    // make it unique to apply your CSS animations just to this exact popup
+    removalDelay: 500,
     mainClass: 'mfp-zoom-in',
     callbacks: {
       beforeOpen: function () {
-        // just a hack that adds mfp-anim class to markup
-        this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+        this.st.image.markup =
+          this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
       }
     },
     closeOnContentClick: true,
-    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+    midClick: true
   });
 
 });

@@ -18,8 +18,11 @@ main:
   - title: "portfolio"
     url: /portfolio/
 
-  - title: "publications (temporary)"
-    url: /publications/
+  # - title: "publications (temporary)"
+  #   url: /publications/
+
+  - title: "projects"
+    url: /projects/
 
   # boop 
   # - title: "Blog Posts"

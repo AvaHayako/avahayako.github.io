@@ -1,28 +1,163 @@
 ---
 layout: archive
 title: "projects "
-page_title: "~ this page is a WIP ~"
+page_title: "selected projects</br>"
 permalink: /projects/
 author_profile: true
 ---
 
 {% include base_path %}
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<script defer src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
-
 <style>
+  .project-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-body {
-  font-family: Arial, sans-serif;
+.regular-link {
+  padding:5px;
+}
+
+/* CARD */
+.project-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+
   padding: 20px;
+  border-radius: 16px;
+  background: var(--global-bg-color);
+  /* border: 1px solid var(--global-border-color); */
+
+   text-decoration: none !important;
+   color: inherit;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover effect */
+.project-card:hover {
+  transform: scale(1.05) !important;
+
+  box-shadow:
+    0 0 10px rgba(250, 255, 101, 0.9),
+    0 0 25px rgba(250, 255, 101, 0.6),
+    0 0 45px rgba(250, 255, 101, 0.35),
+    0 12px 30px rgba(0, 0, 0, 0.35) !important;
+
+  z-index: 2;
+  position: relative;
+}
+
+/* TEXT SIDE */
+.project-text {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.project-text h3 {
+  margin: 0 0 10px;
+  font-size: 3rem;
+}
+
+.project-text h4 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.project-text p {
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+/* IMAGE SIDE */
+.project-image {
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 180px;
+  }
 }
 </style>
+
+
+<div class="project-gallery">
+
+  <div class="project-card">
+
+    <div class="project-text">
+      <div>
+        <h3>Another Snail Planet</h3>
+        <h4> 2D Animation </h4>
+      <p><a href="/projects/snailien-planet/"> <i> Read About How I Did It</i></a></p>
+      <p><a href="https://youtube.com/shorts/pFCUaOE8gjA" target="_blank"> <i>Watch the Animation on YouTube</i></a></p>
+      <p>
+        In this project a watercolor painting to life, creating a 15 second animation that will immerse you into a wholesome world of snail-aliens.
+      </p>
+
+      </div>      
+    </div>
+        <div class="project-image">
+      <img src="/images/art/animation/asp-full-thumbnail.jpg" alt="Snailien Planet thumbnail">
+    </div>
+
+
+  </div>
 <!-- 
-<a href="/project-1">(see my portfolio for examples)</a>.     -->
+  <div class="project-card" href="/projects/second-project/">
+    <div class="project-text">
+      <div>
+        <h3>Experiments with Stop-Motion</h3>
+        <h4> Stop-Motion Animations </h4>
+        <p>Earlier this year, I started experimenting with stop motion. These super-short animations are the result of those experiments!</p>
+      <p>→<a href="/projects/snailien-planet/"> Read About How I Made Them</a></p>
+        <p>Watch Them on YouTube</p>
+      </div>
+    </div>
+      <div class="project-image">
+        <img src="/images/art/snailmation-6.png" alt="Second project preview">
+      </div>
+  </div>
 
+  <div class="project-card" href="/projects/third-project/">
+    <div class="project-text">
+      <div>
+        <h3>The Tree at Hansell St SE</h3>
+        <h4> Painting Series </h4>
+        <p>Back in Atlanta, I became inspired by a very special crepe myrtle tree. These 6 artworks are a result of that inspiration.</p>
+        <p>See and Learn About Them.</p>
+      </div>
+    </div>
+      <div class="project-image">
+        <img src="/images/art/magic tree.jpg" alt="Third project preview">
+      </div>
+  </div>
 
-{% for post in site.projects %}
-  {% include archive-single.html %}
-{% endfor %}
+</div> -->

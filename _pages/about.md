@@ -11,7 +11,7 @@ redirect_from:
 
 <style>
 body {
-  background-image: url('/images/art/another snail planet.jpg');
+  background-image: url('/images/art/watercolor-gouache/another snail planet.jpg');
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
   background-size: cover;

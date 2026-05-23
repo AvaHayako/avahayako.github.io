@@ -1,0 +1,128 @@
+---
+title: "Another Snail Planet"
+excerpt: "A brief 2d animation introducing the residents of a far-far-away planet."
+collection: project
+layout: archive
+---
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script defer src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
+<script>
+    // glightbox init !
+    document.addEventListener("DOMContentLoaded", function () {
+        const lightbox = GLightbox({
+            selector: '.glightbox',
+            autoplayVideos: false // prevents YouTube autoplay on open
+        });
+    });
+</script>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 15px;
+}
+
+
+.content {
+    display: flex;
+    gap: 3em;
+}
+
+.content-card {
+    width: 50%;
+    /* border-radius: 10px; */
+  
+    /* box-shadow: 0 8px 18px rgba(0, 0, 0, 0.612); */
+    /* transition: transform 0.2s ease, box-shadow 0.2s ease; */
+    position: inline;    
+    text-align: center;
+}
+
+.content-card h2 {
+    padding-bottom: 1em;
+}
+
+.content-card img {
+    width: 100%;
+    /* display: flex; */
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.612);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.content-card img:hover {
+  transform: scale(1.05) !important;
+
+  box-shadow:
+    0 0 10px rgba(250, 255, 101, 0.9),
+    0 0 25px rgba(250, 255, 101, 0.6),
+    0 0 45px rgba(250, 255, 101, 0.35),
+    0 12px 30px rgba(0, 0, 0, 0.35) !important;
+
+  z-index: 2;
+  position: relative;
+}
+
+
+
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+</style>
+
+<h2>"Another Snail Planet": A watercolor painting turned animated short</h2> 
+<p>After a few stop-motion projects, I found myself feeling a bit limited by the medium. I wanted my scenes to feel other-worldly and whimsical. But I lacked the materials, or even the interest, to construct such complex scenes. I started to wonder about using my watercolors as the backdrop for an animation. I'd recently finished a painting called "Another Snail Planet," and it felt like the perfect starting point. 
+<h3>Here's a breakdown of how I transformed a watercolor painting into a 2d animated short:</h3>
+
+<p>First, I digitized an original painting by uploading it on GIMP and removing all snails. 
+</br>
+
+<div class="content">
+    <div class="content-card">
+        <h2>original painting</h2>
+        <img 
+            src="/images/art/animation/asp-raw.jpg"></img>
+    </div>  
+        <div class="content-card">
+        <h2>digitized painting</h2>
+        <img 
+            src="/images/art/animation/asp-nosnails.jpg"></img>
+    </div>  
+</div>
+
+<p>Next, I animated 5 snails over the new painting such that, if viewed at full scale, snails would move simultaneously. I animated other elements—such as a butterfly or a pulsating glow on the stars. I used ToonSquid for this part, and the runtime of this initial animation was just 5 seconds long. 
+
+<p>Finally, I imported the result into TikTok to create the final animated short. I zoomed in on some spots, lingered on others, and threw some music over it all. The final animated short runs at 15 seconds.
+
+</br>
+
+<div class="content">
+    <div class="content-card">
+        <h2>initial animation, as a GIF </h2>
+        <img 
+            src="/images/art/animation/resident-snails.gif"></img>
+    </div>  
+        <div class="content-card">
+        <h2>final animated short :D</h2>
+        <img 
+            src="/images/art/animation/asp-v2-thumbnaill.png"></img>
+    </div>  
+</div>
+
+</br>
+All in all, I had so much fun with this project. I'm proud of the results, and I published them on TikTok, Instagram, and YouTube. I challenged myself, learned a lot, and I'm excited to do things differently next time. 

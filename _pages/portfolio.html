@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "portfolio"
-page_title: "check out my art! :D"
+page_title: "portfolio"
 permalink: /portfolio/
 author_profile: true
 ---
@@ -52,13 +52,14 @@ body {
 .filters button:hover {
   transform: translateY(-2px);
   background: linear-gradient(145deg, #eefaa8, #dff08f);
-  box-shadow: 0 6px 14px rgba(90, 120, 60, 0.2);
+  box-shadow: 0 6px 10px rgba(250, 255, 101, 0.432);
+  
 }
 
 .filters button.active {
   background: linear-gradient(145deg, #eaf7a8, #d6ea7d);
   border: 1px solid rgba(90, 120, 60, 0.5);
-  box-shadow: 0 6px 14px rgba(90, 120, 60, 0.25);
+  box-shadow: 0 6px 10px rgba(250, 255, 101, 0.304);
   transform: translateY(-1px);
 }
 
@@ -67,11 +68,11 @@ body {
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 30px;
 
   /* max-width: 1100px; */
 
-  margin: 0 auto;
+  margin: 10 auto;
 }
 
 .gallery img {
@@ -79,13 +80,23 @@ body {
   height: auto;
   display: block;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  
+  /* box-shadow: 0 8px 18px rgba(250, 255, 101, 0.612); */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.612);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .gallery img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transform: scale(1.05) !important;
+
+  box-shadow:
+    0 0 10px rgba(250, 255, 101, 0.9),
+    0 0 25px rgba(250, 255, 101, 0.6),
+    0 0 45px rgba(250, 255, 101, 0.35),
+    0 12px 30px rgba(0, 0, 0, 0.35) !important;
+
+  z-index: 2;
+  position: relative;
 }
 
 @media (max-width: 900px) {
@@ -122,6 +133,8 @@ body {
 .youtube-item:hover img {
   transform: scale(1.02);
   filter: brightness(0.85);
+  box-shadow: 0 8px 18px rgba(250, 255, 101, 0.612);
+
 }
 
 /* play button */
@@ -153,6 +166,8 @@ body {
 .youtube-item:hover .play-button {
   transform: translate(-50%, -50%) scale(1.05);
   background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 8px 18px rgba(250, 255, 101, 0.612);
+
 }
 
 </style>
@@ -160,168 +175,172 @@ body {
 <!-- FILTERS -->
 <div class="filters">
   <button class="active" onclick="filterArt('all', this)">all</button>
-  <button onclick="filterArt('painting', this)">painting</button>
+  <button onclick="filterArt('watercolor-gouache', this)">watercolor/gouache</button>
   <button onclick="filterArt('clay', this)">clay</button>
   <button onclick="filterArt('animation', this)">animation</button>
+  <button onclick="filterArt('pastels', this)">pastels</button>
+  <button onclick="filterArt('other', this)">other</button>
+
 </div>
 
 <!-- GALLERY -->
 <div class="gallery">
 
-<a  href="/images/art/a warm day.jpg" class="glightbox">
-  <img class="painting" src="/images/art/a warm day.jpg">
+<a  href="/images/art/watercolor-gouache/a warm day.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/a warm day.jpg">
 </a>
 
-<a  href="/images/art/another snail planet.jpg" class="glightbox">
-  <img class="painting" src="/images/art/another snail planet.jpg">
+<a  href="/images/art/watercolor-gouache/another snail planet.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/another snail planet.jpg">
 </a>
 
-<a  href="/images/art/sunny.jpg" class="glightbox">
-  <img class="clay" src="/images/art/sunny.jpg">
+<a  href="/images/art/clay/sunny.jpg" class="glightbox">
+  <img class="clay" src="/images/art/clay/sunny.jpg">
 </a>
 
-<a  href="/images/art/elizabeth park tree.jpg" class="glightbox">
-  <img class="painting" src="/images/art/elizabeth park tree.jpg">
+<a  href="/images/art/watercolor-gouache/elizabeth park tree.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/elizabeth park tree.jpg">
 </a>
 
 <a  href="https://youtube.com/embed/Sd38dfsZ-Jc"
    class="glightbox youtube-item">
   <div class="video-thumb">
     <img class="animation"
-         src="/images/art/snailmation-5.png">
+         src="/images/art/animation/snailmation-5.png">
     <div class="play-button">▶</div>
   </div>
 </a>
 
-<a  href="/images/art/thru the window.JPG" class="glightbox">
-  <img class="painting" src="/images/art/thru the window.JPG">
+<a  href="/images/art/watercolor-gouache/thru the window.JPG" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/thru the window.JPG">
 </a>
 
-<a  href="/images/art/olly.jpg" class="glightbox">
-  <img class="clay" src="/images/art/olly.jpg">
+<a  href="/images/art/clay/olly.jpg" class="glightbox">
+  <img class="clay" src="/images/art/clay/olly.jpg">
 </a>
 
-<a  href="/images/art/how it feels.jpg" class="glightbox">
-  <img class="painting" src="/images/art/how it feels.jpg">
+<a  href="/images/art/pastels/how it feels.jpg" class="glightbox">
+  <img class="pastels" src="/images/art/pastels/how it feels.jpg">
 </a>
 
-<a  href="/images/art/lady by the stream.jpg" class="glightbox">
-  <img class="painting" src="/images/art/lady by the stream.jpg">
+<a  href="/images/art/watercolor-gouache/lady by the stream.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/lady by the stream.jpg">
 </a>
 
-<a  href="/images/art/2012.JPG" class="glightbox">
-  <img class="painting" src="/images/art/2012.JPG">
+<a  href="/images/art/watercolor-gouache/2012.JPG" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/2012.JPG">
 </a>
 
-<a  href="/images/art/brown bear.jpg" class="glightbox">
-  <img class="painting" src="/images/art/brown bear.jpg">
+<a  href="/images/art/watercolor-gouache/brown bear.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/brown bear.jpg">
 </a>
 
-<a  href="/images/art/morning time.jpg" class="glightbox">
-  <img class="painting" src="/images/art/morning time.jpg">
+<a  href="/images/art/other/morning time.jpg" class="glightbox">
+  <img class="other" src="/images/art/other/morning time.jpg">
 </a>
 
-<a  href="/images/art/nicky.jpg" class="glightbox">
-  <img class="clay" src="/images/art/nicky.jpg">
+<a  href="/images/art/clay/nicky.jpg" class="glightbox">
+  <img class="clay" src="/images/art/clay/nicky.jpg">
 </a>
 
-<a  href="/images/art/wise snail.jpg" class="glightbox">
-  <img class="clay" src="/images/art/wise snail.jpg">
+<a  href="/images/art/clay/wise snail.jpg" class="glightbox">
+  <img class="clay" src="/images/art/clay/wise snail.jpg">
 </a>
 
-<a  href="/images/art/cowboy snail.jpg" class="glightbox">
-  <img class="clay" src="/images/art/cowboy snail.jpg">
+<a  href="/images/art/clay/cowboy snail.jpg" class="glightbox">
+  <img class="clay" src="/images/art/clay/cowboy snail.jpg">
 </a>
 
-<a  href="/images/art/yipee.jpg" class="glightbox">
-  <img class="clay" src="/images/art/yipee.jpg">
+<a  href="/images/art/clay/yipee.jpg" class="glightbox">
+  <img class="clay" src="/images/art/clay/yipee.jpg">
+
 </a>
 
 <a  href="/images/art/you comin.jpg" class="glightbox">
-  <img class="painting" src="/images/art/you comin.jpg">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/you comin.jpg">
 </a>
 
-<a  href="/images/art/dogs in space comission.jpg" class="glightbox">
-  <img class="painting" src="/images/art/dogs in space comission.jpg">
+<a  href="/images/art/watercolor-gouache/dogs in space comission.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/dogs in space comission.jpg">
 </a>
 
-<a  href="/images/art/seed.JPG" class="glightbox">
-  <img class="painting" src="/images/art/seed.JPG">
+<a  href="/images/art/watercolor-gouache/seed.JPG" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/seed.JPG">
 </a>
 
-<a  href="/images/art/kind person.JPG" class="glightbox">
-  <img class="painting" src="/images/art/kind person.JPG">
+<a  href="/images/art/watercolor-gouache/kind person.JPG" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/kind person.JPG">
 </a>
 
-<a  href="/images/art/ozzys and alberts.JPG" class="glightbox">
-  <img class="painting" src="/images/art/ozzys and alberts.JPG">
+<a  href="/images/art/watercolor-gouache/ozzys and alberts.JPG" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/ozzys and alberts.JPG">
 </a>
 
-<a  href="/images/art/outdoors-person.jpg" class="glightbox">
-  <img class="painting" src="/images/art/outdoors-person.jpg">
+<a  href="/images/art/watercolor-gouache/outdoors-person.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/outdoors-person.jpg">
 </a>
 
-<a  href="/images/art/still.jpg" class="glightbox">
-  <img class="painting" src="/images/art/still.jpg">
+<a  href="/images/art/watercolor-gouache/still.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/still.jpg">
 </a>
 
-<a  href="/images/art/clickers.PNG" class="glightbox">
-  <img class="clay" src="/images/art/clickers.PNG">
+<a  href="/images/art/clay/clickers.PNG" class="glightbox">
+  <img class="clay" src="/images/art/clay/clickers.PNG">
 </a>
 
-<a  href="/images/art/around-me.jpg" class="glightbox">
-  <img class="painting" src="/images/art/around-me.jpg">
+<a  href="/images/art/watercolor-gouache/around-me.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/around-me.jpg">
 </a>
 
-<a  href="/images/art/xmas.jpg" class="glightbox">
-  <img class="clay" src="/images/art/xmas.jpg">
+<a  href="/images/art/clay/xmas.jpg" class="glightbox">
+  <img class="clay" src="/images/art/clay/xmas.jpg">
 </a>
 
-<a  href="/images/art/snail clicker.jpg" class="glightbox">
-  <img class="clay" src="/images/art/snail clicker.jpg">
+<a  href="/images/art/clay/snail clicker.jpg" class="glightbox">
+  <img class="clay" src="/images/art/clay/snail clicker.jpg">
 </a>
 
-<a  href="/images/art/evil ozzy.jpg" class="glightbox">
-  <img class="painting" src="/images/art/evil ozzy.jpg">
+<a  href="/images/art/pastels/evil ozzy.jpg" class="glightbox">
+  <img class="pastels" src="/images/art/pastels/evil ozzy.jpg">
 </a>
 
-<a  href="/images/art/magic tree.jpg" class="glightbox">
-  <img class="painting" src="/images/art/magic tree.jpg">
+<a  href="/images/art/pastels/magic tree.jpg" class="glightbox">
+  <img class="pastels" src="/images/art/pastels/magic tree.jpg">
 </a>
 
-<a  href="/images/art/other ozzy.jpg" class="glightbox">
-  <img class="painting" src="/images/art/other ozzy.jpg">
+<a  href="/images/art/pastels/other ozzy.jpg" class="glightbox">
+  <img class="pastels" src="/images/art/pastels/other ozzy.jpg">
 </a>
 
-<a  href="/images/art/in-a-star.jpg" class="glightbox">
-  <img class="painting" src="/images/art/in-a-star.jpg">
+<a  href="/images/art/watercolor-gouache/" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/in-a-star.jpg">
 </a>
 
-<a  href="/images/art/mug.jpg" class="glightbox">
-  <img class="painting" src="/images/art/mug.jpg">
+<a  href="/images/art/watercolor-gouache/mug.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/mug.jpg">
 </a>
 
-<a  href="/images/art/existential dread.jpg" class="glightbox">
-  <img class="painting" src="/images/art/existential dread.jpg">
+<a  href="/images/art/pastels/existential dread.jpg" class="glightbox">
+  <img class="pastels" src="/images/art/pastels/existential dread.jpg">
 </a>
 
-<a  href="/images/art/ozzy alien comic.jpg" class="glightbox">
-  <img class="painting" src="/images/art/ozzy alien comic.jpg">
+<a  href="/images/art/other/ozzy alien comic.jpg" class="glightbox">
+  <img class="other" src="/images/art/other/ozzy alien comic.jpg">
 </a>
 
-<a  href="/images/art/ozzymancomic.png" class="glightbox">
-  <img class="painting" src="/images/art/ozzymancomic.png">
+<a  href="/images/art/other/ozzymancomic.png" class="glightbox">
+  <img class="other" src="/images/art/other/ozzymancomic.png">
 </a>
 
-<a  href="/images/art/Heysup.gif" class="glightbox">
-  <img class="painting" src="/images/art/Heysup.gif">
+<a  href="/images/art/animation/Heysup.gif" class="glightbox">
+  <img class="animation" src="/images/art/animation/Heysup.gif">
 </a>
 
 <a  href="https://youtube.com/embed/h-wSx2ViN1k"
    class="glightbox youtube-item">
   <div class="video-thumb">
     <img class="animation"
-         src="/images/art/snailmation-6.png">
+         src="/images/art/animation/snailmation-6.png">
     <div class="play-button">▶</div>
   </div>
 </a>
@@ -332,7 +351,7 @@ body {
    class="glightbox youtube-item">
   <div class="video-thumb">
     <img class="animation"
-         src="/images/art/snailmation-3.png">
+         src="/images/art/animation/snailmation-3.png">
     <div class="play-button">▶</div>
   </div>
 </a>
@@ -341,7 +360,7 @@ body {
    class="glightbox youtube-item">
   <div class="video-thumb">
     <img class="animation"
-         src="/images/art/snailmation-2.png">
+         src="/images/art/animation/snailmation-2.png">
     <div class="play-button">▶</div>
   </div>
 </a>
@@ -350,7 +369,7 @@ body {
    class="glightbox youtube-item">
   <div class="video-thumb">
     <img class="animation"
-         src="/images/art/snailmation-4.png">
+         src="/images/art/animation/snailmation-4.png">
     <div class="play-button">▶</div>
   </div>
 </a>
@@ -360,7 +379,7 @@ body {
    class="glightbox youtube-item">
   <div class="video-thumb">
     <img class="animation"
-         src="/images/art/snailmation-1.png">
+         src="/images/art/animation/snailmation-1.png">
     <div class="play-button">▶</div>
   </div>
 </a>

@@ -9,8 +9,9 @@ $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 
 $background                 : #33220a;
-$background-light           : mix(#fff, $background, 80%);
-$background-lighter         : mix(#fff, $background, 90%);
+$background-light           : #33220a;
+$background-lighter           : #33220a;
+/* mix(#fff, $background, 80%); $background-lighter         : mix(#fff, $background, 90%);*/
 $text                       : #ffffff;
 $link                       : #0ea1c5;
 $link-dark                  : mix(#000, $link, 25%);

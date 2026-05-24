@@ -34,9 +34,10 @@ body {
 <h1>artist, cat lover, and nature enthusiast.</h1>
 <h1>welcome to my page :D</h1>
 <body> 
-I like to think that my art is a manifestation of my inner child. <strong>Curiousity, silliness, and imagination are throughlines of my paintings, illustrations, and clay creations.</strong> Common motifs in my art include nature, trees, and snails.
+<strong> I like to think that my art is a manifestation of my inner child. 
+Curiousity, imagination, and whimsy are throughlines of my art. </strong> Common motifs are sprawling trees, colorful foliage, and snails that grow limbs and carry trinkets in their shells. I'm deeply inspired by nature and all of its living things. I primarily use watercolor, clay, and animation (stop-motion and 2d).
 <br/><br/>
-Recently, I've been experimenting with animation! I want to bring life to the universe that I've been creating, and that starts with giving my art a story. What do the snails in my paintings get up to? What do they think about or chat about, do they have jobs or favorite hobbies? And how can I imbue my art with the things I care about--solidarity, creative expression, inner peace, to name a few. 
+Recently, I've been inspired to create art that tells stories. I want to bring life to the flourishing universe I've been building. What do the snails in my art get up to? What do they think about or chat about, do they have jobs or favorite hobbies? And how can I imbue my art with the things I care about--solidarity, creative expression, inner peace, to name a few. 
 <br/><br/>
 In any case, I'm excited to evolve as an artist with time and experience. Taking my art seriously has been one of the best decisions I've made in my life. I've been able to express myself more than ever, meanwhile bringing joy to others with my silly creations. Wherever I go, and whatever happens, I am just grateful to be able to create.
 <br/><br/>

@@ -65,9 +65,11 @@ body {
 
 /* ---------- GALLERY GRID ---------- */
 
+
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 30px;
 
   /* max-width: 1100px; */
@@ -116,8 +118,8 @@ body {
 .video-thumb {
   position: relative;
   width: 100%;
-  width:220px;
-  height: 392px;
+  width:176px;
+  height: 313px;
 }
 
 .video-thumb img {
@@ -186,8 +188,28 @@ body {
 <!-- GALLERY -->
 <div class="gallery">
 
+
+<a  href="https://youtube.com/embed/pFCUaOE8gjA"
+   class="glightbox youtube-item">
+  <div class="video-thumb">
+    <img class="animation"
+         src="/images/art/animation/asp-v3-thumbnail.png">
+    <div class="play-button">▶</div>
+  </div>
+</a>
+
+
 <a  href="/images/art/watercolor-gouache/a warm day.jpg" class="glightbox">
   <img class="watercolor-gouache" src="/images/art/watercolor-gouache/a warm day.jpg">
+</a>
+
+<a  href="https://youtube.com/embed/h-wSx2ViN1k"
+   class="glightbox youtube-item">
+  <div class="video-thumb">
+    <img class="animation"
+         src="/images/art/animation/snailmation-6.png">
+    <div class="play-button">▶</div>
+  </div>
 </a>
 
 <a  href="/images/art/watercolor-gouache/another snail planet.jpg" class="glightbox">
@@ -202,6 +224,7 @@ body {
   <img class="watercolor-gouache" src="/images/art/watercolor-gouache/elizabeth park tree.jpg">
 </a>
 
+
 <a  href="https://youtube.com/embed/Sd38dfsZ-Jc"
    class="glightbox youtube-item">
   <div class="video-thumb">
@@ -211,13 +234,27 @@ body {
   </div>
 </a>
 
-<a  href="/images/art/watercolor-gouache/thru the window.JPG" class="glightbox">
-  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/thru the window.JPG">
+
+<a  href="/images/art/watercolor-gouache/outdoors-person.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/outdoors-person.jpg">
 </a>
+
+
 
 <a  href="/images/art/clay/olly.jpg" class="glightbox">
   <img class="clay" src="/images/art/clay/olly.jpg">
 </a>
+
+
+
+<a  href="/images/art/you comin.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/you comin.jpg">
+</a>
+
+<a  href="/images/art/watercolor-gouache/thru the window.JPG" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/thru the window.JPG">
+</a>
+
 
 <a  href="/images/art/pastels/how it feels.jpg" class="glightbox">
   <img class="pastels" src="/images/art/pastels/how it feels.jpg">
@@ -227,28 +264,76 @@ body {
   <img class="watercolor-gouache" src="/images/art/watercolor-gouache/lady by the stream.jpg">
 </a>
 
-<a  href="/images/art/watercolor-gouache/2012.JPG" class="glightbox">
-  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/2012.JPG">
+<a  href="/images/art/pastels/hansell-tree.jpg" class="glightbox">
+  <img class="pastels" src="/images/art/pastels/hansell-tree.jpg">
+</a>
+
+
+<a  href="https://www.youtube.com/embed/ZGWDkBbTAJk"
+   class="glightbox youtube-item">
+  <div class="video-thumb">
+    <img class="animation"
+         src="/images/art/animation/snailmation-4.png">
+    <div class="play-button">▶</div>
+  </div>
+</a>
+
+
+<a  href="/images/art/watercolor-gouache/snail-and-eye.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/snail-and-eye.jpg">
+</a>
+
+<a  href="/images/art/watercolor-gouache/snail-reflecting.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/snail-reflecting.jpg">
+</a>
+
+<a  href="/images/art/watercolor-gouache/vibing-snails.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/vibing-snails.jpg">
 </a>
 
 <a  href="/images/art/watercolor-gouache/brown bear.jpg" class="glightbox">
   <img class="watercolor-gouache" src="/images/art/watercolor-gouache/brown bear.jpg">
 </a>
 
-<a  href="/images/art/other/morning time.jpg" class="glightbox">
-  <img class="other" src="/images/art/other/morning time.jpg">
+
+<a  href="/images/art/watercolor-gouache/miami.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/miami.jpg">
 </a>
+
+<a  href="/images/art/watercolor-gouache/sad.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/sad.jpg">
+</a>
+
+<a  href="/images/art/watercolor-gouache/snail planet.jpg" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/snail planet.jpg">
+</a>
+
+<a  href="/images/art/watercolor-gouache/kind person.JPG" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/kind person.JPG">
+</a>
+
 
 <a  href="/images/art/clay/nicky.jpg" class="glightbox">
   <img class="clay" src="/images/art/clay/nicky.jpg">
 </a>
 
-<a  href="/images/art/clay/wise snail.jpg" class="glightbox">
-  <img class="clay" src="/images/art/clay/wise snail.jpg">
+<a  href="/images/art/other/ponyoland.jpg" class="glightbox">
+  <img class="other" src="/images/art/other/ponyoland.jpg">
 </a>
+
+<a  href="/images/art/watercolor-gouache/2012.JPG" class="glightbox">
+  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/2012.JPG">
+</a>
+
+
 
 <a  href="/images/art/clay/cowboy snail.jpg" class="glightbox">
   <img class="clay" src="/images/art/clay/cowboy snail.jpg">
+</a>
+
+
+<a  href="/images/art/other/morning time.jpg" class="glightbox">
+  <img class="other" src="/images/art/other/morning time.jpg">
 </a>
 
 <a  href="/images/art/clay/yipee.jpg" class="glightbox">
@@ -256,9 +341,6 @@ body {
 
 </a>
 
-<a  href="/images/art/you comin.jpg" class="glightbox">
-  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/you comin.jpg">
-</a>
 
 <a  href="/images/art/watercolor-gouache/dogs in space comission.jpg" class="glightbox">
   <img class="watercolor-gouache" src="/images/art/watercolor-gouache/dogs in space comission.jpg">
@@ -268,16 +350,22 @@ body {
   <img class="watercolor-gouache" src="/images/art/watercolor-gouache/seed.JPG">
 </a>
 
-<a  href="/images/art/watercolor-gouache/kind person.JPG" class="glightbox">
-  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/kind person.JPG">
+<a  href="/images/art/clay/wise snail.jpg" class="glightbox">
+  <img class="clay" src="/images/art/clay/wise snail.jpg">
 </a>
+
 
 <a  href="/images/art/watercolor-gouache/ozzys and alberts.JPG" class="glightbox">
   <img class="watercolor-gouache" src="/images/art/watercolor-gouache/ozzys and alberts.JPG">
 </a>
 
-<a  href="/images/art/watercolor-gouache/outdoors-person.jpg" class="glightbox">
-  <img class="watercolor-gouache" src="/images/art/watercolor-gouache/outdoors-person.jpg">
+<a  href="https://youtube.com/embed/3yD7KhsLYvQ"
+   class="glightbox youtube-item">
+  <div class="video-thumb">
+    <img class="animation"
+         src="/images/art/animation/asp-v1-thumbnail.png">
+    <div class="play-button">▶</div>
+  </div>
 </a>
 
 <a  href="/images/art/watercolor-gouache/still.jpg" class="glightbox">
@@ -299,6 +387,7 @@ body {
 <a  href="/images/art/clay/snail clicker.jpg" class="glightbox">
   <img class="clay" src="/images/art/clay/snail clicker.jpg">
 </a>
+
 
 <a  href="/images/art/pastels/evil ozzy.jpg" class="glightbox">
   <img class="pastels" src="/images/art/pastels/evil ozzy.jpg">
@@ -336,16 +425,6 @@ body {
   <img class="animation" src="/images/art/animation/Heysup.gif">
 </a>
 
-<a  href="https://youtube.com/embed/h-wSx2ViN1k"
-   class="glightbox youtube-item">
-  <div class="video-thumb">
-    <img class="animation"
-         src="/images/art/animation/snailmation-6.png">
-    <div class="play-button">▶</div>
-  </div>
-</a>
-
-
 
 <a  href="https://youtube.com/embed/UW5vyTMQPR0"
    class="glightbox youtube-item">
@@ -365,14 +444,7 @@ body {
   </div>
 </a>
 
-<a  href="https://www.youtube.com/embed/ZGWDkBbTAJk"
-   class="glightbox youtube-item">
-  <div class="video-thumb">
-    <img class="animation"
-         src="/images/art/animation/snailmation-4.png">
-    <div class="play-button">▶</div>
-  </div>
-</a>
+
 
 
 <a  href="https://youtube.com/embed/RFp0CMUC40E"

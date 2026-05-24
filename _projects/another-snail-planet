@@ -33,6 +33,7 @@ body {
 
 .content-card {
     width: 50%;
+    /* display: block; */
     /* border-radius: 10px; */
   
     /* box-shadow: 0 8px 18px rgba(0, 0, 0, 0.612); */
@@ -182,14 +183,15 @@ body {
             <img src="/images/art/animation/resident-snails.gif"></img>
         </a>
     </div>  
-        <div class="content-card">
+    <div class="content-card">
         <h2>final animated short :D</h2>
         <a href="https://youtube.com/embed/pFCUaOE8gjA" class="glightbox youtube-item" > 
-            <img 
-            src="/images/art/animation/asp-v2-thumbnaill.png">
-            
-            <div class="play-button">▶</div>
-            </img> 
+            <div class="video-thumb">
+                <img 
+                src="/images/art/animation/asp-v2-thumbnaill.png"></img>
+                <div class="play-button">▶</div>
+                 
+            </div>
         </a>
     </div>  
 </div>

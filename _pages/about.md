@@ -39,9 +39,7 @@ Curiousity, imagination, and whimsy are throughlines of my art. </strong> Common
 <br/><br/>
 Recently, I've been inspired to create art that tells stories. I want to bring life to the flourishing universe I've been building. What do the snails in my art get up to? What do they think about or chat about, do they have jobs or favorite hobbies? And how can I imbue my art with the things I care about--solidarity, creative expression, inner peace, to name a few. 
 <br/><br/>
-In any case, I'm excited to evolve as an artist with time and experience. Taking my art seriously has been one of the best decisions I've made in my life. I've been able to express myself more than ever, meanwhile bringing joy to others with my silly creations. Wherever I go, and whatever happens, I am just grateful to be able to create.
-<br/><br/>
-I love talking about all things creative! Feel free to email me or message me on social media if you ever wanna chat. I am also always up to do a comission in any of the mediums I use <a href="/portfolio">(see my portfolio for examples)</a>.    
+Anyway--I love talking about all things creative! Feel free to email me or message me on social media if you ever wanna chat. I am also always up to do a comission in any of the mediums I use. Check out my <a href="/portfolio">portfolio</a> or my <a href="/projects">selected projects</a> for examples.   
 </body>
 </p>
 </div>
